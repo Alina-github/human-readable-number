@@ -1,5 +1,4 @@
-module.exports = function toReadable (number) {
-    function toReadable(number) {
+module.exports = function toReadable(number) {
         let ones = ['zero', 'one', 'two', 'tree', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
         let teens = ['ten', 'eleven', 'twelve', 'thirteen', ones[4]+'teen', 'fifteen', ones[6]+'teen', ones[7]+'teen', ones[8]+'teen', ones[9]+'teen'];
         let dozens = ['', '', 'twenty', 'thirty', 'fourty','fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
