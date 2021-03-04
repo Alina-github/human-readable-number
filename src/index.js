@@ -13,10 +13,11 @@ module.exports = function toReadable(number) {
         return teens[number % 10];
     }
 
-    if (number > 100) {
+    if (number >= 100) {
         let b = number % 100;
 
         if (b == 0) { return ones[number / 100] + " " + hundreds[0];}
+        if (number == 100) {return 100;}
         else if (b < 10) { return ones[Math.floor(number / 100)] + " " + hundreds[0] + " " + ones[b % 10]; }
         else if (b > 9 && b < 20) { return ones[Math.floor(number / 100)] + " " + hundreds[0] + " " + teens[b % 10];}
         else if (b < 100 && b % 10 !== 0) { return ones[Math.floor(number / 100)] + " " + hundreds[0] + " " + dozens[Math.floor(b / 10)] + " " + ones[b % 10]; }
